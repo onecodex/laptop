@@ -98,3 +98,9 @@ else \
 # @2 - Prompt when not in GIT repo
 echo " '$Yellow$PathShort$Color_Off'\$ "; \
 fi)'
+
+# Pyenv prompts and completions
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+eval "$(pyenv virtualenv-init -)"
