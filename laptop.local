@@ -1,0 +1,29 @@
+#!/bin/sh
+
+brew bundle --file=- <<EOF
+brew "bash"
+brew "node"
+brew "python"
+brew "pyenv"
+EOF
+
+fancy_echo "Installing Rust and Rust nightly..."
+curl https://sh.rustup.rs -sSf | sh -s -- -y
+source $HOME/.cargo/env
+rustup update
+rustup install nightly
+
+fancy_echo "Setting default shell back to Bash..."
+sudo chsh -s "/usr/local/bin/bash" "$USER"
+
+fancy_echo "Installing custom .bash_profile"
+if [ ! -f ~/.bash_profile ]; then
+	curl --remote-name https://raw.githubusercontent.com/onecodex/laptop/master/bash_profile && mv bash_profile ~/.bash_profile
+fi
+if [ ! -f ~/.git-prompt.sh ]; then
+	curl --remote-name https://raw.githubusercontent.com/onecodex/laptop/master/git-prompt.sh && mv git-prompt.sh ~/.git-prompt.sh
+fi
+
+fancy_echo "Cleaning up old Homebrew formulae ..."
+brew cleanup
+brew cask cleanup
