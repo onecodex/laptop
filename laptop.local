@@ -5,6 +5,7 @@ brew "bash"
 brew "node"
 brew "python"
 brew "pyenv"
+brew "pyenv-virtualenv"
 EOF
 
 fancy_echo "Installing Rust and Rust nightly..."
