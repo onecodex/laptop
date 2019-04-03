@@ -29,5 +29,8 @@ fi
 fancy_echo "Installing aptible ..."
 brew cask install aptible
 
+fancy_echo "Installing kubectl"
+brew install kubectl
+
 fancy_echo "Cleaning up old Homebrew formulae ..."
 brew cleanup
