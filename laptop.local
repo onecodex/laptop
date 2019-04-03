@@ -26,5 +26,8 @@ if [ ! -f ~/.git-prompt.sh ]; then
 	curl --remote-name https://raw.githubusercontent.com/onecodex/laptop/master/git-prompt.sh && mv git-prompt.sh ~/.git-prompt.sh
 fi
 
+fancy_echo "Installing docker ..."
+brew cask install docker
+
 fancy_echo "Cleaning up old Homebrew formulae ..."
 brew cleanup
