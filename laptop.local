@@ -32,5 +32,8 @@ brew cask install aptible
 fancy_echo "Installing kubectl"
 brew install kubectl
 
+fancy_echo "Installing pre-commit"
+brew install pre-commit
+
 fancy_echo "Cleaning up old Homebrew formulae ..."
 brew cleanup
