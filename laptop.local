@@ -35,5 +35,9 @@ brew install kubectl
 fancy_echo "Installing pre-commit"
 brew install pre-commit
 
+fancy_echo "Installing Git LFS"
+brew install git-lfs
+git lfs install
+
 fancy_echo "Cleaning up old Homebrew formulae ..."
 brew cleanup
