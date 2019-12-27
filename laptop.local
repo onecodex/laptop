@@ -35,6 +35,9 @@ brew install kubectl
 fancy_echo "Installing pre-commit"
 brew install pre-commit
 
+fancy_echo "Installing xmlsec1"
+brew install xmlsec1
+
 fancy_echo "Installing Git LFS"
 brew install git-lfs
 git lfs install
