@@ -42,5 +42,8 @@ fancy_echo "Installing Git LFS"
 brew install git-lfs
 git lfs install
 
+fancy_echo "Installing direnv"
+brew install direnv
+
 fancy_echo "Cleaning up old Homebrew formulae ..."
 brew cleanup
