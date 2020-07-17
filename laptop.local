@@ -45,5 +45,8 @@ git lfs install
 fancy_echo "Installing direnv"
 brew install direnv
 
+fancy_echo "Installing mailhog"
+brew install mailhog
+
 fancy_echo "Cleaning up old Homebrew formulae ..."
 brew cleanup
