@@ -27,7 +27,7 @@ if [ ! -f ~/.git-prompt.sh ]; then
 fi
 
 fancy_echo "Installing aptible ..."
-brew cask install aptible
+brew install --cask aptible
 
 fancy_echo "Installing kubectl"
 brew install kubectl
